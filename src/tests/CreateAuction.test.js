@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Home from "components/Home";
 import { MoralisProvider } from "react-moralis";
 // require('parse/node');
-require('moralis/node');
+// require('moralis/node');
 
 let container = null;
  
