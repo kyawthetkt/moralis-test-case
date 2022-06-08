@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useMoralisQuery } from "react-moralis";
 
 const Home = () => {
+  
+  const { data } = useMoralisQuery("collection");
+  
+  useEffect( () => {
 
-  const { data: collections } = useMoralisQuery("CvlCollections");
-  console.log('collections: ', collections);
+    console.log("data: ", data);
+
+  }, [data]);
 
   return (
-      <div>
-         <h3>Home Page</h3>
-      </div>
+    <div>
+      <h3>Test On Home Page</h3>
+    </div>
   );
 };
 
