@@ -43,13 +43,21 @@ window.matchMedia =
 
 describe("Creatin Auction", () => {
 
-  // test("should show auction form", async () => {
-    
-  // });
+  test("auction form", async () => {
+    render( 
+      <MoralisProvider
+        appId={process.env.REACT_APP_MORALIS_APP}
+        serverUrl={process.env.REACT_APP_MORALIS_SERVER}
+      >
+        <Home />
+      </MoralisProvider>
+   );
+    expect(await screen.findByText(/delectus aut autem/i)).toBeInTheDocument();
+ });
 
-  test("test useffect ajax call", async () => {
-      render(<AjaxCallComponent />);
-      expect(await screen.findByText(/delectus aut autem/i)).toBeInTheDocument();
-  });
+  // test("test useffect ajax call", async () => {
+  //     render(<AjaxCallComponent />);
+  //     expect(await screen.findByText(/delectus aut autem/i)).toBeInTheDocument();
+  // });
 
 });

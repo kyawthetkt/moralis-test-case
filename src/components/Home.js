@@ -3,13 +3,8 @@ import { useMoralisQuery } from "react-moralis";
 
 const Home = () => {
   
-  const { data } = useMoralisQuery("collection");
-  
-  useEffect( () => {
-
-    console.log("data: ", data);
-
-  }, [data]);
+  const { data } = useMoralisQuery("CvlCollections");
+  console.log("data: ", data);
 
   return (
     <div>
